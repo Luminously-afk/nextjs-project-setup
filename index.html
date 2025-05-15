@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National ID Registration System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>National ID Registration System</h1>
+        <p class="header-subtitle">Manage and track identification records</p>
+    </header>
+
+    <main class="container">
+        <section class="registration-section">
+            <h2>Add New Record</h2>
+            <p class="section-description">Fill in the details below to register a new National ID record</p>
+            <form id="registrationForm">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step form-step-active" data-step="1">
+                    <h3>Step 1: Personal Information</h3>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required placeholder="Enter Full Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthAddress">Birth Place</label>
+                        <textarea id="birthAddress" required placeholder="Enter Birth Place Address"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentAddress">Current Address</label>
+                        <textarea id="currentAddress" required placeholder="Enter Current Address"></textarea>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" id="nextBtn1" class="btn-next">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Family Information -->
+                <div class="form-step" data-step="2">
+                    <h3>Step 2: Family Information</h3>
+                    <div class="form-group">
+                        <label for="motherName">Mother's Name</label>
+                        <input type="text" id="motherName" required placeholder="Enter Mother's Full Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fatherName">Father's Name</label>
+                        <input type="text" id="fatherName" required placeholder="Enter Father's Full Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number</label>
+                        <input type="tel" id="contactNumber" required placeholder="Enter Contact Number" pattern="[0-9\+\-\s]+" title="Enter a valid phone number">
+                        <small class="input-help">Enter a valid phone number (e.g., +1-234-567-8900)</small>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" id="prevBtn2" class="btn-prev">Previous</button>
+                        <button type="button" id="nextBtn2" class="btn-next">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: ID and Document Details merged -->
+                <div class="form-step" data-step="3">
+                    <h3>Step 3: ID and Document Details</h3>
+                    <div class="form-group">
+                        <label for="primaryIdNumber">Primary ID Number</label>
+                        <input type="text" id="primaryIdNumber" required placeholder="Enter Primary ID Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="secondaryIdNumber1">Secondary ID Number 1</label>
+                        <input type="text" id="secondaryIdNumber1" placeholder="Enter Secondary ID Number 1 (optional)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="secondaryIdNumber2">Secondary ID Number 2</label>
+                        <input type="text" id="secondaryIdNumber2" placeholder="Enter Secondary ID Number 2 (optional)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="placeOfIssue">Place of Issue</label>
+                        <input type="text" id="placeOfIssue" required placeholder="Enter Place of Issue">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateOfIssue">Date of Issue</label>
+                        <input type="date" id="dateOfIssue" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="date" id="expiryDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="issuingAuthority">Issuing Authority</label>
+                        <input type="text" id="issuingAuthority" required placeholder="Enter Issuing Authority">
+                    </div>
+                    <div class="form-group">
+                        <label for="documentType">Document Type</label>
+                        <select id="documentType" required>
+                            <option value="">Select Document Type</option>
+                            <option value="passport">Passport</option>
+                            <option value="driverLicense">Driver's License</option>
+                            <option value="birthCertificate">Birth Certificate</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" id="prevBtn3" class="btn-prev">Previous</button>
+                        <button type="button" id="nextBtn3" class="btn-next">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Additional Details -->
+                <div class="form-step" data-step="4">
+                    <h3>Step 4: Additional Details</h3>
+                    <div class="form-group">
+                        <label for="nationality">Nationality</label>
+                        <input type="text" id="nationality" required placeholder="Enter Nationality">
+                    </div>
+                    <div class="form-group">
+                        <label for="maritalStatus">Marital Status</label>
+                        <select id="maritalStatus" required>
+                            <option value="">Select Marital Status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="occupation">Occupation</label>
+                        <input type="text" id="occupation" required placeholder="Enter Occupation">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="Enter Email Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="emergencyContact">Emergency Contact</label>
+                        <input type="tel" id="emergencyContact" required placeholder="Enter Emergency Contact Number">
+                        <small class="input-help">Enter a valid phone number</small>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" id="prevBtn4" class="btn-prev">Previous</button>
+                        <button type="button" id="nextBtn4" class="btn-next">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Final Review & Submit -->
+                <div class="form-step" data-step="5">
+                    <h3>Step 5: Final Review & Submit</h3>
+                    <p>Please review your information before submitting.</p>
+                    <div id="reviewInfo"></div>
+                    <div class="button-group">
+                        <button type="button" id="prevBtn4" class="btn-prev">Previous</button>
+                        <button type="submit" id="submitBtn">Add Record</button>
+                        <button type="button" id="cancelBtn" style="display: none;">Cancel</button>
+                    </div>
+                </div>
+            </form>
+            <div id="errorMessage" class="error-message"></div>
+        </section>
+
+        <section class="records-section">
+            <h2>Registered Records</h2>
+            <p class="section-description">View and manage all registered National ID records</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>National ID</th>
+                            <th>Full Name</th>
+                            <th>Date of Birth</th>
+                            <th>Gender</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsTableBody">
+                        <tr class="no-records">
+                            <td colspan="6">No records found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
