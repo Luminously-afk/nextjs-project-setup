@@ -306,21 +306,60 @@ function closeModal(modal) {
     }, 300);
 }
 
+function deleteRecord(index) {
+    if (confirm('Are you sure you want to delete this record?')) {
+        records.splice(index, 1);
+        renderTable();
+        showMessage('Record deleted successfully!', 'success');
+    }
+}
+
+function editRecord(index) {
+    const record = records[index];
+    editIndex = index;
+    
+    // Populate form fields with record data
+    Object.keys(record).forEach(key => {
+        const element = document.getElementById(key);
+        if (element) {
+            element.value = record[key];
+        }
+    });
+
+    // Update button text and show cancel button
+    document.getElementById('submitBtn').textContent = 'Update Record';
+    const cancelBtn = document.getElementById('cancelBtn');
+    cancelBtn.style.display = 'inline-block';
+    cancelBtn.onclick = resetForm;
+
+    // Show first step
+    showStep(1);
+    
+    // Scroll to form
+    document.querySelector('.registration-section').scrollIntoView({ behavior: 'smooth' });
+}
+
 function handleFormSubmit() {
     const data = gatherFormData();
-    data.nationalIdNumber = 'To be issued';
-    data.status = 'Pending';
     
     if (editIndex === -1) {
+        // New record
+        data.nationalIdNumber = 'To be issued';
+        data.status = 'Pending';
         records.push(data);
+        showMessage('Record added successfully!', 'success');
     } else {
+        // Update existing record
+        const existingRecord = records[editIndex];
+        data.nationalIdNumber = existingRecord.nationalIdNumber;
+        data.status = existingRecord.status;
         records[editIndex] = data;
         editIndex = -1;
+        showMessage('Record updated successfully!', 'success');
     }
 
     resetForm();
     renderTable();
-    showMessage('Record saved successfully!', 'success');
 }
 
 function gatherFormData() {
