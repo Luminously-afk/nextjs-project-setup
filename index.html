@@ -24,17 +24,17 @@
                     <h3>Step 1: Personal Information</h3>
                     <div class="form-group">
                         <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" required placeholder="Enter Full Name">
+                        <input type="text" id="fullName" name="fullName" required placeholder="Enter Full Name">
                     </div>
 
                     <div class="form-group">
                         <label for="dob">Date of Birth</label>
-                        <input type="date" id="dob" required>
+                        <input type="date" id="dob" name="dob" required>
                     </div>
 
                     <div class="form-group">
                         <label for="gender">Gender</label>
-                        <select id="gender" required>
+                        <select id="gender" name="gender" required>
                             <option value="">Select Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
@@ -44,12 +44,12 @@
 
                     <div class="form-group">
                         <label for="birthAddress">Birth Place</label>
-                        <textarea id="birthAddress" required placeholder="Enter Birth Place Address"></textarea>
+                        <textarea id="birthAddress" name="birthAddress" required placeholder="Enter Birth Place Address"></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="currentAddress">Current Address</label>
-                        <textarea id="currentAddress" required placeholder="Enter Current Address"></textarea>
+                        <textarea id="currentAddress" name="currentAddress" required placeholder="Enter Current Address"></textarea>
                     </div>
 
                     <div class="button-group">
@@ -62,17 +62,17 @@
                     <h3>Step 2: Family Information</h3>
                     <div class="form-group">
                         <label for="motherName">Mother's Name</label>
-                        <input type="text" id="motherName" required placeholder="Enter Mother's Full Name">
+                        <input type="text" id="motherName" name="motherName" required placeholder="Enter Mother's Full Name">
                     </div>
 
                     <div class="form-group">
                         <label for="fatherName">Father's Name</label>
-                        <input type="text" id="fatherName" required placeholder="Enter Father's Full Name">
+                        <input type="text" id="fatherName" name="fatherName" required placeholder="Enter Father's Full Name">
                     </div>
 
                     <div class="form-group">
                         <label for="contactNumber">Contact Number</label>
-                        <input type="tel" id="contactNumber" required placeholder="Enter Contact Number" pattern="[0-9\+\-\s]+" title="Enter a valid phone number">
+                        <input type="tel" id="contactNumber" name="contactNumber" required placeholder="Enter Contact Number" pattern="[0-9\+\-\s]+" title="Enter a valid phone number">
                         <small class="input-help">Enter a valid phone number (e.g., +1-234-567-8900)</small>
                     </div>
 
@@ -87,38 +87,38 @@
                     <h3>Step 3: ID and Document Details</h3>
                     <div class="form-group">
                         <label for="primaryIdNumber">Primary ID Number</label>
-                        <input type="text" id="primaryIdNumber" required placeholder="Enter Primary ID Number">
+                        <input type="text" id="primaryIdNumber" name="primaryIdNumber" required placeholder="Enter Primary ID Number">
                     </div>
 
                     <div class="form-group">
                         <label for="secondaryIdNumber1">Secondary ID Number 1</label>
-                        <input type="text" id="secondaryIdNumber1" placeholder="Enter Secondary ID Number 1 (optional)">
+                        <input type="text" id="secondaryIdNumber1" name="secondaryIdNumber1" placeholder="Enter Secondary ID Number 1 (optional)">
                     </div>
 
                     <div class="form-group">
                         <label for="secondaryIdNumber2">Secondary ID Number 2</label>
-                        <input type="text" id="secondaryIdNumber2" placeholder="Enter Secondary ID Number 2 (optional)">
+                        <input type="text" id="secondaryIdNumber2" name="secondaryIdNumber2" placeholder="Enter Secondary ID Number 2 (optional)">
                     </div>
 
                     <div class="form-group">
                         <label for="placeOfIssue">Place of Issue</label>
-                        <input type="text" id="placeOfIssue" required placeholder="Enter Place of Issue">
+                        <input type="text" id="placeOfIssue" name="placeOfIssue" required placeholder="Enter Place of Issue">
                     </div>
                     <div class="form-group">
                         <label for="dateOfIssue">Date of Issue</label>
-                        <input type="date" id="dateOfIssue" required>
+                        <input type="date" id="dateOfIssue" name="dateOfIssue" required>
                     </div>
                     <div class="form-group">
                         <label for="expiryDate">Expiry Date</label>
-                        <input type="date" id="expiryDate" required>
+                        <input type="date" id="expiryDate" name="expiryDate" required>
                     </div>
                     <div class="form-group">
                         <label for="issuingAuthority">Issuing Authority</label>
-                        <input type="text" id="issuingAuthority" required placeholder="Enter Issuing Authority">
+                        <input type="text" id="issuingAuthority" name="issuingAuthority" required placeholder="Enter Issuing Authority">
                     </div>
                     <div class="form-group">
                         <label for="documentType">Document Type</label>
-                        <select id="documentType" required>
+                        <select id="documentType" name="documentType" required>
                             <option value="">Select Document Type</option>
                             <option value="passport">Passport</option>
                             <option value="driverLicense">Driver's License</option>
@@ -138,11 +138,11 @@
                     <h3>Step 4: Additional Details</h3>
                     <div class="form-group">
                         <label for="nationality">Nationality</label>
-                        <input type="text" id="nationality" required placeholder="Enter Nationality">
+                        <input type="text" id="nationality" name="nationality" required placeholder="Enter Nationality">
                     </div>
                     <div class="form-group">
                         <label for="maritalStatus">Marital Status</label>
-                        <select id="maritalStatus" required>
+                        <select id="maritalStatus" name="maritalStatus" required>
                             <option value="">Select Marital Status</option>
                             <option value="single">Single</option>
                             <option value="married">Married</option>
@@ -152,15 +152,15 @@
                     </div>
                     <div class="form-group">
                         <label for="occupation">Occupation</label>
-                        <input type="text" id="occupation" required placeholder="Enter Occupation">
+                        <input type="text" id="occupation" name="occupation" required placeholder="Enter Occupation">
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" required placeholder="Enter Email Address">
+                        <input type="email" id="email" name="email" required placeholder="Enter Email Address">
                     </div>
                     <div class="form-group">
                         <label for="emergencyContact">Emergency Contact</label>
-                        <input type="tel" id="emergencyContact" required placeholder="Enter Emergency Contact Number">
+                        <input type="tel" id="emergencyContact" name="emergencyContact" required placeholder="Enter Emergency Contact Number">
                         <small class="input-help">Enter a valid phone number</small>
                     </div>
                     <div class="button-group">
